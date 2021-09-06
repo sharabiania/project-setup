@@ -33,3 +33,22 @@ This initial package.json should look something like this:
   }
 }
 ```
+
+## setup express with typescript:
+- npm i express
+- npm i @types/express
+- add server.ts file:
+```
+import express from 'express';
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send("hello world");
+});
+
+app.listen(port, () => {  
+  return console.log(`server is listening on ${port}`);
+});
+```
